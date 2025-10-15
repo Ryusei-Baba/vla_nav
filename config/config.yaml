@@ -1,0 +1,11 @@
+# パラメータファイル
+vla_nav_node:
+  ros__parameters:
+    camera_topic: /image_raw # カメラ画像トピック
+    cmd_vel_topic: /cmd_vel # ロボット制御トピック
+    api_key: AIzaSyCMVDgRVJLWDDpDUGIzt1Ayc8zeRk9CQfA # Google Cloud APIキー
+    model_name: gemini-2.5-flash-lite  # 使用するモデル名
+    inference_interval: 4.0  # 推論間隔（秒）
+    prompt: "Analyze this robot camera image and provide a single navigation command. Choose one of: 'move forward', 'turn left', or 'turn right'. Base your decision on obstacles, free space, and safe navigation. Respond with ONLY the command, no explanation."  # プロンプト
+    linear_vel: 0.6 # 並進速度
+    angular_vel: 1.0  # 角速度
